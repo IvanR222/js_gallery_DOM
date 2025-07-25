@@ -13,6 +13,6 @@ thumbs.addEventListener('click', (e) => {
 
   const largeImage = document.getElementById('largeImg');
 
-  largeImage.src = link.href;
+  largeImage.src = new URL(link.getAttribute('href'), document.baseURI).href;
   largeImage.alt = link.title;
 });
